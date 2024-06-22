@@ -1,8 +1,14 @@
-#pragma once
+// #pragma once
+#ifndef GARDNER_H_
+#define GARDNER_H_
 #include "FlowersBouquet.h"
-class Gardener
+#include "Person.h"
+using namespace std;
+class Gardener : public Person
 {
 public:
-	FlowersBouquet* prepareBouquet(std::vector < std::string >);
+	Gardener(string nameP);
+	FlowersBouquet *prepareBouquet(vector<string> bouquet);
 };
 
+#endif

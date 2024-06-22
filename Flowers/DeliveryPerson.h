@@ -1,9 +1,12 @@
-#pragma once
+// #pragma once
+#ifndef DELIVERYPERSON_H_
+#define DELIVERYPERSON_H_
 #include "FlowersBouquet.h"
 #include "Person.h"
-class DeliveryPerson
+class DeliveryPerson : public Person
 {
 public:
-	void deliver(Person*, FlowersBouquet*);
+	DeliveryPerson(string name);
+	void deliver(Person *p, FlowersBouquet *fb);
 };
-
+#endif

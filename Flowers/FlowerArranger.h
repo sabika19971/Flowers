@@ -1,8 +1,15 @@
-#pragma once
+// #pragma once
+// #include <iostream>
+// #include <vector>
+// #include <string>
+#ifndef FLOWERARRANGER_H_
+#define FLOWERARRANGER_H_
+#include "Person.h"
 #include "FlowersBouquet.h"
-class FlowerArranger
+class FlowerArranger : public Person
 {
 public:
-	void arrangeFlowers(FlowersBouquet* flowerBouqet);
+	FlowerArranger(string name);
+	void arrangeFlowers(FlowersBouquet *flowerBouqet);
 };
-
+#endif
