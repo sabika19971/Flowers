@@ -10,6 +10,8 @@ DeliveryPerson::DeliveryPerson(string name) : Person(name){};
 
 void DeliveryPerson::deliver(Person *p, FlowersBouquet *fb)
 {
-    cout << "Delivery Person " << GetName() << " delivers flowers " << (*p).GetName() << endl;
-    (*p).acceptFlowers(fb);
+    if(p!=NULL & fb!=NULL){
+        cout << "Delivery Person " << GetName() << " delivers flowers " << (*p).GetName() << endl;
+        (*p).acceptFlowers(fb);
+    }
 };

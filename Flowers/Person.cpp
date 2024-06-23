@@ -16,14 +16,18 @@ string Person::GetName()
 };
 void Person::orderFlowers(Florist *florist, Person *person, vector<string> bouquet)
 {
-	cout << GetName() << " orders flowers to " << (*person).GetName() << " from Florist " << (*florist).GetName() << ": ";
-	ToStringBouquet(bouquet);
-	(*florist).acceptOrder(person, bouquet);
+	if(florist!=NULL){
+		cout << GetName() << " orders flowers to " << (*person).GetName() << " from Florist " << (*florist).GetName() << ": ";
+		ToStringBouquet(bouquet);
+		(*florist).acceptOrder(person, bouquet);
+	}
 };
 
 void Person::acceptFlowers(FlowersBouquet *fb){
-	cout<<GetName()<<" accepts the flowers: ";
-	ToStringBouquet((*fb).GetBouquet());
+	if(fb !=NULL){
+		cout<<GetName()<<" accepts the flowers: ";
+		ToStringBouquet((*fb).GetBouquet());
+	}
 };
 
 void Person::ToStringBouquet(vector<string> bouquet){

@@ -5,6 +5,8 @@ FlowerArranger::FlowerArranger(string name) : Person(name){};
 
 void FlowerArranger::arrangeFlowers(FlowersBouquet *flowerBouqet)
 {
-    cout << "Flower Arranger " << GetName() << " arranges flowers." << endl;
-    (*flowerBouqet).arrange();
+    if(flowerBouqet != NULL){
+        cout << "Flower Arranger " << GetName() << " arranges flowers." << endl;
+        (*flowerBouqet).arrange();
+    }
 };
