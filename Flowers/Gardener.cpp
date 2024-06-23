@@ -10,6 +10,5 @@ FlowersBouquet *Gardener::prepareBouquet(vector<string> bouquet)
     cout<<"Gardener "<<GetName()<<" prepares flowers."<<endl;
     FlowersBouquet *fb = new FlowersBouquet(bouquet);
     (*fb).arrange();
-    cout<<"Gardener "<<GetName()<<" returns flowers to Grower ";
     return fb;
 };

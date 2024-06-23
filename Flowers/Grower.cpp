@@ -12,7 +12,6 @@ FlowersBouquet *Grower::prepareOrder(vector<string> bouquet)
 {
     cout << "Grower " << GetName() << " forwards the request to Gardener " << (*gardener).GetName() << "." << endl;
     FlowersBouquet *myBouquet = (*gardener).prepareBouquet(bouquet);
-    cout << GetName() << "." << endl;
-    cout << "Grower " << GetName() << " returns flowers to Wholesaler ";
+    cout <<"Gardener "<<(*gardener).GetName()<<" returns flowers to Grower "<< GetName() << "." << endl;
     return myBouquet;
 };

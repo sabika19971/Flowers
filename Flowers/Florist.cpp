@@ -15,12 +15,12 @@ Florist::Florist(string name, Wholesaler *wholesaler, FlowerArranger *flowerArra
 
 void Florist::acceptOrder(Person *person, vector<string> bouquet)
 {
-    cout << "Florist " << GetName() << " forwards request to Wholesaler ";
+    cout << "Florist " << GetName() << " forwards request to Wholesaler "<<(*wholeSaler).GetName()<<endl;
     FlowersBouquet *myBouquet = (*wholeSaler).acceptOrder(bouquet);
-    cout << GetName() << "." << endl;
+    cout << "Wholesaler " << (*wholeSaler).GetName() << " returns flowers to Florist "<< GetName() << "." << endl;
     cout << "Florist " << GetName() << " request flowers arrangement from Flower Arranger " << (*flowerarranger).GetName() << endl;
     (*flowerarranger).arrangeFlowers(myBouquet);
-    cout << GetName() << "." << endl;
+    cout << "Flower Arranger " << (*flowerarranger).GetName() << " returns arranged flowers to Florist "<<GetName()<<endl;
     cout << "Florist " << GetName() << " forwards flowers to Delivery Person " << (*deliveryperson).GetName() << endl;
     (*deliveryperson).deliver(person, myBouquet);
 };
